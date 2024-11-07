@@ -87,8 +87,14 @@ function App() {
 
           {/* Result layout */}
       <div className="results-container" > 
+
+      
         <div className="exact-matches">
-          <h2>Exact Matches</h2>
+        <div className="headers">
+          <p>Exact Matches</p>
+        </div>
+          
+        <div className="primary-information">
           {exactMatches && exactMatches.length > 0 ? (
             <>
               <CompactDisplay results={exactMatches} />
@@ -96,9 +102,21 @@ function App() {
           ) : (
             <p className="no-matches">No exact matches found.</p>
           )}
+          </div>
+
+          <div className="footer">
+          <p>footer</p>
+          </div>
         </div>
+
+
+
         <div className="possible-matches">
-          <h2>Possible Matches</h2>
+        <div className="headers">
+        <p> Possible Matches</p>
+        </div>
+          
+          <div className="primary-information">
           {possibleMatches && possibleMatches.length > 0 ? (
             <>
               <CompactDisplay results={possibleMatches} />
@@ -106,6 +124,12 @@ function App() {
           ) : (
             <p className="no-matches">No possible matches found.</p>
           )}
+          </div>
+
+          <div className="footer">
+          <p>footer</p>
+          </div>
+
         </div>
       </div>
     </div>
